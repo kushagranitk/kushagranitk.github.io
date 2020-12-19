@@ -8,13 +8,12 @@
   --main-gray: #303841; /* CSS variable */
 }
 
-/* Base reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* box-sizing and font sizing */
+
 *,
 *::before,
 *::after {
@@ -46,8 +45,6 @@ html {
     font-size: 55%;
   }
 }
-
-/* Base styles */
 
 body {
   /*font-family: 'Poppins', sans-serif;*/
@@ -81,12 +78,8 @@ a {
   color: var(--main-white);
 }
 
-img {
-  display: block;
-  width: 100%;
-}
 
-/* nav */
+/**********************************************************START NAV*****************************************************/
 
 .nav {
   display: flex;
@@ -125,6 +118,9 @@ img {
   background: var(--main-blue);
 }
 
+/***********************************************************END NAV**************************************************/
+
+
 /***********************************************************WELCOME SECTION*****************************************************/
 .welcome-section {
   display: flex;
@@ -133,7 +129,7 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url("about.jpg");
+  background-image: url("fig2.jpg");
   background-size: cover;
 }
 
@@ -156,13 +152,14 @@ img {
   box-shadow: 5px 10px 8px #888888;
   border-radius: 10px;
 }
+
 .column > p,ul{
   color:black;
 }
+
 .column>h2{
   color: #45567d;
   margin-bottom: 20px;
-
 }
 
 .row:after {
@@ -171,7 +168,7 @@ img {
   clear: both;
 }
 
-.project-entry > li{
+.work-entry > li{
   font-size: 2rem;
   font-weight: 200;
   font-style: italic;
@@ -180,136 +177,43 @@ img {
   margin-left: 20px;
 }
 
-/********************************************************EDUCATION SECTION**************************************************/
-.column-ed {
-  float: left;
-  width: 98%;
-  margin:10px;
-  padding: 10px;
-  min-height: 250px;
-  border: 1px solid;
-  box-shadow: 5px 10px 8px #888888;
-  border-radius: 10px;
-}
-
-.column-ed > p,ul{
-  color:black;
-}
-
-.column-ed > h2{
-  color: #45567d;
-  margin-bottom: 20px;
-}
-
-.row-ed:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.education-section {
-  padding: 10rem 2rem;
-  background-image: url("edu.jpg");
-  background-size: cover;
-}
-/************************************************************END EDUCATION SECTION*****************************************************/
-
-.projects-section {
+.work-section {
   /*text-align: center;*/
   padding: 10rem 2rem;
-  background: var(--main-blue);
-}
-
-.projects-section-header {
-  max-width: 640px;
-  margin: 0 auto 6rem auto;
-  /*border-bottom: 0.2rem solid var(--main-white);*/
-  font-family: 'Raleway', sans-serif;
-}
-
-@media (max-width: 28.75em) {
-  .projects-section-header {
-    font-size: 4rem;
-  }
-}
-
-/* "Automagic" image grid using no media queries */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 6rem;
+  background-image: url("fig15.jpg");
+  background-size: cover;
+  /*background: var(--main-blue);*/
 }
 
 @media (max-width: 30.625em) {
-  .projects-section {
+  .work-section {
     padding: 6rem 1rem;
   }
 
-  .projects-grid {
+  .work-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.project {
-  background: var(--main-gray);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
+/********************************************************EDUCATION SECTION**************************************************/
+.education-section {
+  padding: 10rem 2rem;
+  background-image: url("fig13.jpg");
+  background-size: cover;
 }
 
-.code {
-  color: var(--main-gray);
-  transition: color 0.3s ease-out;
-}
-
-.project:hover .code {
-  color: #ff7f50;
-}
-
-.project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 3rem;
-  padding: 2rem 0.5rem;
-  /*font-style: italic;*/
-  font-family: 'Raleway', sans-serif;
-
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
-}
-
-.btn-show-all {
+.education-entry > li{
   font-size: 2rem;
-  background: var(--main-gray);
-  transition: background 0.3s ease-out;
+  font-weight: 200;
+  font-style: italic;
+  color: #333333;
+  list-style: disc;
+  margin-left: 20px;
 }
 
-.btn-show-all:hover {
-  background: var(--main-red);
-}
+/************************************************************END EDUCATION SECTION*****************************************************/
 
-.btn-show-all:hover > i {
-  transform: translateX(2px);
-}
-
-.btn-show-all > i {
-  margin-left: 10px;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-}
-
-/* Contact section */
+/********************************************************START CONTACT SECTION**************************************************** */
 
 .contact-section {
   display: flex;
@@ -356,6 +260,12 @@ img {
   transform: translateY(8px);
 }
 
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
 /************************************************************START FOOTER SECTION***************************************************/
 footer {
   font-weight: 300;
@@ -364,19 +274,4 @@ footer {
   padding: 2rem;
   background: var(--main-gray);
   border-top: 4px solid var(--main-red);
-}
-
-footer > p {
-  margin: 2rem;
-}
-
-footer i {
-  vertical-align: middle;
-}
-
-@media (max-width: 28.75em) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
 }
