@@ -129,7 +129,7 @@ a {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: url("fig2.jpg");
+  background-image: url("img/fig1.jpg");
   background-size: cover;
 }
 
@@ -180,7 +180,7 @@ a {
 .work-section {
   /*text-align: center;*/
   padding: 10rem 2rem;
-  background-image: url("fig15.jpg");
+  background-image: url("img/fig2.jpg");
   background-size: cover;
   /*background: var(--main-blue);*/
 }
@@ -198,7 +198,7 @@ a {
 /********************************************************EDUCATION SECTION**************************************************/
 .education-section {
   padding: 10rem 2rem;
-  background-image: url("fig13.jpg");
+  background-image: url("img/fig3.jpg");
   background-size: cover;
 }
 
